@@ -20,7 +20,7 @@ public class Model {
 	private Map<Integer, Player> idMap;
 	private double max;
 	private List<Player> soluzione;
-	private Map<Integer, Player> mappaNera;
+	
 	
 	public Model() {
 		dao=new PremierLeagueDAO();
@@ -74,9 +74,8 @@ public class Model {
 		this.max=0.0;
 		this.soluzione=null;
 		List<Player> parziale=new ArrayList<Player>();
-		this.mappaNera=new HashMap<>();
 		this.doRicorsione(parziale, k, 0);
-		System.out.println(soluzione+" "+this.max);
+		//System.out.println(soluzione+" "+this.max);
 		return soluzione;
 		}
 	
